@@ -109,11 +109,11 @@ describe VCAP::Services::Memcached::Node do
     it "should check whether provisioned instance is running or not" do
       @logger.debug("test : start instance #{@instance.inspect}")
       @instance.pid = @node.start_instance(@instance)
-      sleep 2
+      sleep 10
       @instance.running?.should == true
       @logger.debug("test : stop instance #{@instance.inspect}")
       @node.stop_instance(@instance)
-      sleep 2
+      sleep 10
       @instance.running?.should == false
     end
 

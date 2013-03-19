@@ -1,5 +1,9 @@
 !/bin/bash
 set -e
+echo "################ memcached info"
+echo $(which memcached)
+echo $(memcached -h)
+echo "################ memcached info end"
 sudo mkdir -p /var/vcap/packages
 sudo mkdir -p /var/vcap/store
 sudo chown -R $USER /var/vcap
